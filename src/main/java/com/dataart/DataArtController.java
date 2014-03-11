@@ -1,7 +1,13 @@
 package com.dataart;
 
+import com.dataart.db.JdbcDao;
 import com.dataart.domain.Group;
+import com.dataart.domain.Product;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowire;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +23,9 @@ import java.util.List;
 public class DataArtController {
 	private static final Logger log = Logger.getLogger(DataArtController.class);
 
+    @Autowired
+    public JdbcDao jdbcDao;
+
     @RequestMapping(method = RequestMethod.GET)
 	public String index(
             @RequestParam(value = "groupId", required = false) Long groupId,
@@ -24,14 +33,18 @@ public class DataArtController {
             @RequestParam(value = "sortField", required = false) String sortField,
             @RequestParam(value = "sortDirection", required = false) String sortDirection,
             ModelMap model) {
-        List<Group> groups = new ArrayList<Group>();
-        groups.add(new Group(0, "Cars", 2));
-        groups.add(new Group(1, "Bikes", 5));
+        // get group list for the left panel
+        List<Group> groups = jdbcDao.getGroups();
         model.addAttribute("groups", groups);
         log.info("Groups [" + groups + "]");
-        log.info("Group Id [" + groupId + "]");
 
-        model.addAttribute("product", "Hello product!");
+        // if some group is selected, then get the list of products
+        if (groupId != null) {
+            List<Product> products = jdbcDao.getProducts(groupId, page, sortField, sortDirection);
+            model.addAttribute("products", products);
+            log.info("Products [" + products + "]");
+        }
+
 		return "index";
 	}
 }

@@ -30,6 +30,10 @@ public class Group {
 
     @Override
     public String toString() {
-        return id + ": " + name + " (" + productCount + ")";
+        return "Group{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", productCount=" + productCount +
+                '}';
     }
 }
