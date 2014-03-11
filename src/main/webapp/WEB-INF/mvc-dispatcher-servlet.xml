@@ -18,4 +18,12 @@
 
     <mvc:annotation-driven />
 
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://vdb2.dataart.net:3306/hr_test" />
+        <property name="username" value="hr_test" />
+        <property name="password" value="12gh56qw" />
+    </bean>
+
 </beans>
