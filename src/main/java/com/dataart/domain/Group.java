@@ -7,15 +7,6 @@ public class Group {
 
     private int productCount;
 
-    public Group() {
-    }
-
-    public Group(long id, String name, int productCount) {
-        this.id = id;
-        this.name = name;
-        this.productCount = productCount;
-    }
-
     public long getId() {
         return id;
     }
@@ -26,6 +17,18 @@ public class Group {
 
     public int getProductCount() {
         return productCount;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setProductCount(int productCount) {
+        this.productCount = productCount;
     }
 
     @Override

@@ -4,18 +4,7 @@ public class Product {
     private long id;
     private String name;
     private long groupId;
-    private String price;
-
-    public Product(long id, String name, long groupId, String price) {
-        this.id = id;
-        this.name = name;
-        this.groupId = groupId;
-        this.price = price;
-    }
-
-    public Product() {
-
-    }
+    private long price;
 
     public long getId() {
         return id;
@@ -29,8 +18,24 @@ public class Product {
         return groupId;
     }
 
-    public String getPrice() {
+    public long getPrice() {
         return price;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGroupId(long groupId) {
+        this.groupId = groupId;
+    }
+
+    public void setPrice(long price) {
+        this.price = price;
     }
 
     @Override

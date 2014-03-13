@@ -28,11 +28,14 @@ public class DataArtController {
 
     @RequestMapping(method = RequestMethod.GET)
 	public String index(
-            @RequestParam(value = "groupId", required = false) Long groupId,
-            @RequestParam(value = "page", required = false) Integer page,
-            @RequestParam(value = "sortField", required = false) String sortField,
-            @RequestParam(value = "sortDirection", required = false) String sortDirection,
+            @RequestParam(value = "group", required = false) Long groupId,
+            @RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
+            @RequestParam(value = "sortField", required = false, defaultValue = "id") String sortField,
+            @RequestParam(value = "sortDirection", required = false, defaultValue = "") String sortDirection,
             ModelMap model) {
+        log.info("Got request. Params: group [" + groupId + "], page [" + page + "], sortField ["
+                + sortField + "], sortDirection [" + sortDirection + "]");
+
         // get group list for the left panel
         List<Group> groups = jdbcDao.getGroups();
         model.addAttribute("groups", groups);
