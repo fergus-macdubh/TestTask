@@ -11,11 +11,13 @@ body {
 
 div.main {
     width: 900px;
+    height: 100%;
     margin: 0 auto;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35)
 }
 
 div.leftColumn {
+    height: 100%;
     padding: 10px;
     float: left;
     width: 250px;
@@ -23,8 +25,30 @@ div.leftColumn {
 }
 
 div.rightColumn {
+    height: 100%;
     float: left;
     padding: 10px;
     width: 650px;
     background-color: #DDD;
+}
+
+table.products,
+table.products th,
+table.products td {
+    border: solid #0088CC 1px;
+}
+
+table.products th,
+table.products td {
+    padding: 5px;
+}
+
+table.products th {
+    background-color: #51CBEE;
+}
+
+div.pagination {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
 }

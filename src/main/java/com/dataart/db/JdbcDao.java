@@ -28,10 +28,6 @@ public class JdbcDao {
     public List<Product> getProducts(Long groupId, Integer page, String sortField, String sortDirection) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         List<Product> products = null;
-        groupId = 2l;
-        page = 0;
-        sortField = "name";
-        sortDirection = "";
 
         try {
             products = jdbcTemplate.query(
@@ -40,30 +36,10 @@ public class JdbcDao {
                             "   p.PRODUCT_NAME as name,\n" +
                             "   p.GROUP_ID as groupId,\n" +
                             "   p.PRODUCT_PRICE as price\n" +
-                            "from  T_PRODUCT p\n" +
-                            "where p.GROUP_ID=?\n" +
-                            "order by name\n" +
-                            "limit 0,10",
-                    new BigDecimal[]{BigDecimal.valueOf(groupId)},
+                            "from T_PRODUCT p\n" +
+                            "where p.GROUP_ID=?",
+                    new Object[]{groupId},
                     new BeanPropertyRowMapper(Product.class));
-
-//            products = jdbcTemplate.query(
-//                    "SELECT\n" +
-//                            "   p.PRODUCT_ID as id,\n" +
-//                            "   p.PRODUCT_NAME as name,\n" +
-//                            "   p.GROUP_ID as groupId,\n" +
-//                            "   p.PRODUCT_PRICE as price\n" +
-//                            "from  T_PRODUCT p\n" +
-//                            "where p.GROUP_ID=?\n" +
-//                            "order by ? ?\n" +
-//                            "limit ?,?",
-//                    new Object[]{
-//                            groupId,
-//                            StringUtils.isNotEmpty(sortField) ? sortField : "id",
-//                            StringUtils.isNotEmpty(sortDirection) ? sortDirection : "asc",
-//                            Long.valueOf((page != null ? page : 0) * PRODUCTS_PER_PAGE),
-//                            Long.valueOf((page != null ? page : 0) * PRODUCTS_PER_PAGE + 10)},
-//                    new BeanPropertyRowMapper(Product.class));
         } catch (Throwable e) {
             log.error(e.getMessage(), e);
         }
