@@ -20,7 +20,7 @@ public class JdbcDao {
     @Autowired
     private DataSource dataSource;
 
-    public List<Product> getProducts(Long groupId, Integer page, String sortField, String sortDirection) {
+    public List<Product> getProducts(Long groupId) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         List<Product> products = null;
 

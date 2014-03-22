@@ -1,6 +1,8 @@
 package com.dataart.domain;
 
-public class Group {
+import java.io.Serializable;
+
+public class Group implements Serializable {
     private long id;
 
     private String name;
