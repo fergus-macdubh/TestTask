@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b98d4400-1ec6-44fd-9999-03999f531b64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="DELETED" beforePath="D:\Work\DataArt\src\main\resources\db.properties" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dataart/DataArtController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dataart/DataArtController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dataart/db/JdbcDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/dataart/db/JdbcDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_29.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_29.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/dataart.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/dataart.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dataart/domain/Product.java" afterPath="$PROJECT_DIR$/src/main/java/com/dataart/domain/Product.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DataArt.iws" />
@@ -77,11 +75,26 @@
       <file leaf-file-name="products.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="25" selection-start="1507" selection-end="1507" vertical-scroll-proportion="1.2227074" vertical-offset="0" max-vertical-offset="780">
-              <folding>
-                <marker date="1395480796574" expanded="true" signature="473:1137" placeholder="..." />
-                <marker date="1395480796574" expanded="true" signature="1171:1578" placeholder="..." />
-              </folding>
+            <state line="47" column="140" selection-start="2356" selection-end="2356" vertical-scroll-proportion="0.83014864" vertical-offset="549" max-vertical-offset="1140">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dataart/domain/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="44" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="840">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="207" column="2" selection-start="5376" selection-end="5376" vertical-scroll-proportion="-15.8" vertical-offset="3745" max-vertical-offset="9700">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,13 +120,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/groups.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dataart/domain/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dataart/domain/Group.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="db-console:/bd9f6a34/78390bf1-beea-4663-8267-0b9296446d99/" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/dataart.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/dataart/db/JdbcDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dataart/DataArtController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dataart/domain/Product.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp" />
       </list>
     </option>
@@ -740,7 +754,8 @@
     <MESSAGE value="jdbcDao added" />
     <MESSAGE value="spring jdbc added" />
     <MESSAGE value="jdbc calls added&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="jdbc calls added&#10;" />
+    <MESSAGE value="pagination and sorting added" />
+    <option name="LAST_COMMIT_MESSAGE" value="pagination and sorting added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -774,10 +789,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="109" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="540">
-          <folding>
-            <marker date="1395480796574" expanded="true" signature="473:1137" placeholder="..." />
-            <marker date="1395480796574" expanded="true" signature="1171:1578" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -791,10 +803,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="56" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="400">
-          <folding>
-            <marker date="1395480796574" expanded="true" signature="473:1137" placeholder="..." />
-            <marker date="1395480796574" expanded="true" signature="1171:1578" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -815,10 +824,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="27" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="400">
-          <folding>
-            <marker date="1395480796574" expanded="true" signature="473:1137" placeholder="..." />
-            <marker date="1395480796574" expanded="true" signature="1171:1578" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -839,10 +845,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="27" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="400">
-          <folding>
-            <marker date="1395480796574" expanded="true" signature="473:1137" placeholder="..." />
-            <marker date="1395480796574" expanded="true" signature="1171:1578" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -875,11 +878,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3560" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="43" selection-start="1743" selection-end="1782" vertical-scroll-proportion="0.4045977" vertical-offset="1428" max-vertical-offset="9700" />
-      </provider>
-    </entry>
     <entry file="jar://C:/jdk7/jre/lib/rt.jar!/java/lang/String.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="19" selection-start="158" selection-end="158" vertical-scroll-proportion="0.19305019" vertical-offset="0" max-vertical-offset="4420" />
@@ -893,11 +891,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dataart/domain/Group.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="24" selection-start="96" selection-end="96" vertical-scroll-proportion="0.113250285" vertical-offset="0" max-vertical-offset="883" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dataart/domain/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="42" selection-end="42" vertical-scroll-proportion="0.045300115" vertical-offset="0" max-vertical-offset="883" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.0.2.RELEASE/spring-jdbc-4.0.2.RELEASE-sources.jar!/org/springframework/jdbc/core/StatementCreatorUtils.java">
@@ -964,13 +957,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="207" column="2" selection-start="5376" selection-end="5376" vertical-scroll-proportion="-15.8" vertical-offset="3745" max-vertical-offset="9700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dataart/domain/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="44" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="25" selection-start="1507" selection-end="1507" vertical-scroll-proportion="1.2227074" vertical-offset="0" max-vertical-offset="780">
-          <folding>
-            <marker date="1395480796574" expanded="true" signature="473:1137" placeholder="..." />
-            <marker date="1395480796574" expanded="true" signature="1171:1578" placeholder="..." />
-          </folding>
+        <state line="47" column="140" selection-start="2356" selection-end="2356" vertical-scroll-proportion="0.83014864" vertical-offset="549" max-vertical-offset="1140">
+          <folding />
         </state>
       </provider>
     </entry>

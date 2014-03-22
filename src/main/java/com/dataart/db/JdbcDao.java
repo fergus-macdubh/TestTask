@@ -2,18 +2,13 @@ package com.dataart.db;
 
 import com.dataart.domain.Group;
 import com.dataart.domain.Product;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
-import java.math.BigDecimal;
-import java.sql.*;
 import java.util.List;
 
 @Service

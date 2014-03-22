@@ -205,9 +205,9 @@ div[class*="rounded"] {
     background: #C4E1F8
 }
 
-.inline-link-1:visited {
+/*.inline-link-1:visited {
     background: #F2BF97
-}
+}*/
 
 .inline-link-2 {
     display: inline-block;
